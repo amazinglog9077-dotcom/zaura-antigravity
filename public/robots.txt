@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://zaurakweb.com.br/sitemap.xml
