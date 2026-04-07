@@ -13,9 +13,7 @@ import {
   Minus,
   CheckCircle2,
   Send,
-  Instagram,
-  Facebook,
-  Linkedin
+  Instagram
 } from 'lucide-react';
 
 const WhatsAppIcon = ({ size = 32 }: { size?: number }) => (
@@ -47,7 +45,7 @@ const LeadForm = () => {
     setStatus('loading');
 
     try {
-      const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz8eSI2U60xYaioUcUE1vty1V4D2G0oqfQSERxOiISXw-nrMVwq9bzyuA0Moq285cnY/exec";
+      const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyeA7nYXZm8qKAutAl7q49T8-iKckmCLA82e9dMnBAStl_hoMJ1dP-L8Dl3LJdd1QE_/exec";
 
       if (GOOGLE_SHEET_URL) {
         await fetch(GOOGLE_SHEET_URL, {
@@ -296,7 +294,7 @@ export default function App() {
   }, []);
 
   const whatsappLink = "https://wa.me/5511932313943";
-  const email = "contato@zaurakweb.com.br";
+  const email = "zaurakdesign@gmail.com";
   const address = "Embu das Artes";
 
   return (
@@ -364,13 +362,12 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <section className="relative pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-black/40">
-          <video
-            src={heroBgVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
+          <video 
+            src={heroBgVideo} 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
             className="absolute inset-0 w-full h-full object-cover opacity-80 z-[-2] pointer-events-none"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black z-[-1] pointer-events-none" />
@@ -413,12 +410,9 @@ export default function App() {
                     <MessageCircle size={18} />
                     Quero mais clientes agora
                   </TechButton>
-                  <a
-                    href="#form-diagnostico"
-                    className="flex items-center px-6 py-4 border border-white/10 font-mono text-sm text-white/60 uppercase tracking-widest whitespace-nowrap hover:border-cyan-tech/50 hover:text-white transition-all"
-                  >
-                    Ver como funciona
-                  </a>
+                  <div className="flex items-center px-6 py-4 border border-white/10 font-mono text-sm text-white/60 uppercase tracking-widest whitespace-nowrap">
+                    Foco 100% em Resultado
+                  </div>
                 </div>
               </motion.div>
 
@@ -555,7 +549,7 @@ export default function App() {
                     src={officeWorkersImg}
                     alt="Interface de site sendo criado"
                     className="w-full grayscale hover:grayscale-0 transition-all duration-700 opacity-60"
-                    loading="lazy"
+                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
@@ -668,9 +662,9 @@ export default function App() {
                       <div className="aspect-video bg-black/40 overflow-hidden relative">
                         <img
                           src={site.image || `https://picsum.photos/seed/${site.url}/800/450`}
-                          alt={`Screenshot do site ${site.url} — ${site.type}`}
+                          alt={site.url}
                           className="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity duration-500"
-                          loading="lazy"
+                          referrerPolicy="no-referrer"
                         />
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                           <TechButton variant="outline" className="bg-black/80">Ver Projeto</TechButton>
@@ -737,19 +731,15 @@ export default function App() {
               <div className="lg:col-span-2">
                 <FAQItem
                   question="Preciso já ter um site ou redes sociais?"
-                  answer="Não. Começamos do zero — cuidamos do domínio, hospedagem, identidade visual e estratégia de captação. Se você já tem redes sociais ou um site antigo, aproveitamos o que funciona e melhoramos o resto."
+                  answer="Não. Podemos começar do zero e estruturar tudo para você, desde a compra do domínio até a estratégia de captação de clientes."
                 />
                 <FAQItem
                   question="Em quanto tempo fica pronto?"
-                  answer="Landing pages ficam prontas em 5 a 10 dias úteis. Sites completos levam até 15 dias. Trabalhamos com etapas claras e você acompanha tudo em tempo real — sem sumiço, sem surpresa."
+                  answer="Depende do projeto, mas a proposta é sempre entregar o mais rápido possível sem perder qualidade. Projetos padrão costumam ser entregues em até 15 dias úteis."
                 />
                 <FAQItem
                   question="Vocês dão suporte depois?"
-                  answer="Sim. Todo projeto inclui suporte técnico e ajustes pós-entrega. Se algo parar de funcionar ou você quiser atualizar uma informação, é só chamar no WhatsApp — respondemos no mesmo dia."
-                />
-                <FAQItem
-                  question="Qual é o investimento?"
-                  answer="Trabalhamos com preços acessíveis para pequenas empresas, sem taxa de plataforma mensal. O valor varia conforme o projeto — peça um orçamento grátis e sem compromisso."
+                  answer="Sim. Você terá suporte técnico e ajustes garantidos para assegurar que sua solução de vendas continue operando em alta performance."
                 />
               </div>
             </div>
@@ -771,7 +761,7 @@ export default function App() {
             <div className="flex flex-col items-center gap-3 w-full text-center">
               <div className="flex items-center gap-4">
                 <a
-                  href="https://www.instagram.com/zaurakweb"
+                  href="https://www.instagram.com/zaurakweb.sp/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -779,25 +769,7 @@ export default function App() {
                 >
                   <Instagram size={16} />
                 </a>
-                <a
-                  href="https://www.facebook.com/zaurakweb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="w-9 h-9 flex items-center justify-center border border-white/10 text-white/40 hover:text-cyan-tech hover:border-cyan-tech/50 transition-colors rounded-sm"
-                >
-                  <Facebook size={16} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/zaurakweb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="w-9 h-9 flex items-center justify-center border border-white/10 text-white/40 hover:text-cyan-tech hover:border-cyan-tech/50 transition-colors rounded-sm"
-                >
-                  <Linkedin size={16} />
-                </a>
-                <a
+<a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
