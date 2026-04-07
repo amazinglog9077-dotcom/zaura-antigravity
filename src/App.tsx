@@ -353,14 +353,25 @@ export default function App() {
             <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
           </nav>
 
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex items-center py-2.5 px-6 border border-cyan-tech text-cyan-tech text-xs font-sans font-medium uppercase tracking-[0.1em] hover:bg-cyan-tech/10 hover:shadow-[0_0_15px_rgba(0,242,255,0.2)] transition-all rounded-sm"
-          >
-            Quero mais clientes agora
-          </a>
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="https://www.instagram.com/zaurakweb.sp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="w-9 h-9 flex items-center justify-center border border-white/10 text-white/40 hover:text-cyan-tech hover:border-cyan-tech/50 transition-colors rounded-sm"
+            >
+              <InstagramIcon size={17} />
+            </a>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center py-2.5 px-6 border border-cyan-tech text-cyan-tech text-xs font-sans font-medium uppercase tracking-[0.1em] hover:bg-cyan-tech/10 hover:shadow-[0_0_15px_rgba(0,242,255,0.2)] transition-all rounded-sm"
+            >
+              Quero mais clientes agora
+            </a>
+          </div>
         </div>
       </header>
 
