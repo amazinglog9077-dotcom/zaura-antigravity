@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "headers": [
     {
-      "source": "/og-image.jpg",
+      "source": "/zaurakweb-preview.jpg",
       "headers": [
         {
           "key": "Cache-Control",
