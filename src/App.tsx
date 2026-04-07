@@ -13,9 +13,7 @@ import {
   Minus,
   CheckCircle2,
   Send,
-  Instagram,
-  Facebook,
-  Linkedin
+  Instagram
 } from 'lucide-react';
 
 const WhatsAppIcon = ({ size = 32 }: { size?: number }) => (
@@ -763,7 +761,7 @@ export default function App() {
             <div className="flex flex-col items-center gap-3 w-full text-center">
               <div className="flex items-center gap-4">
                 <a
-                  href="https://www.instagram.com/zaurakweb"
+                  href="https://www.instagram.com/zaurakweb.sp/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -771,25 +769,7 @@ export default function App() {
                 >
                   <Instagram size={16} />
                 </a>
-                <a
-                  href="https://www.facebook.com/zaurakweb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="w-9 h-9 flex items-center justify-center border border-white/10 text-white/40 hover:text-cyan-tech hover:border-cyan-tech/50 transition-colors rounded-sm"
-                >
-                  <Facebook size={16} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/zaurakweb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="w-9 h-9 flex items-center justify-center border border-white/10 text-white/40 hover:text-cyan-tech hover:border-cyan-tech/50 transition-colors rounded-sm"
-                >
-                  <Linkedin size={16} />
-                </a>
-                <a
+<a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
