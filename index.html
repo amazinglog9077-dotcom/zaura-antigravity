@@ -3,24 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zaurak Web — agência digital em Embu das Artes e Grande SP. Criamos sites, gerenciamos tráfego pago (Meta + Google), redes sociais e identidade visual para PMEs. Apareça no Google e venda mais." />
-    <meta name="keywords" content="agência de sites são paulo, criar site empresa sp, gestão instagram pequenas empresas, tráfego pago para empresa, fazer site profissional sp, agência de marketing digital sp, identidade visual sp, gestão de redes sociais embu das artes, landing page conversão, Zaurak Web" />
-    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- SEO Core -->
+    <meta name="description" content="Zaurak Web — agência digital em Embu das Artes e Grande SP. Criamos sites profissionais, gerenciamos tráfego pago (Meta + Google Ads), redes sociais e identidade visual para PMEs. Orçamento grátis." />
+    <meta name="keywords" content="agência de sites são paulo, criar site empresa sp, gestão instagram pequenas empresas, tráfego pago para empresa, fazer site profissional sp, agência de marketing digital sp, identidade visual sp, gestão de redes sociais embu das artes, landing page conversão, Zaurak Web, agência digital embu das artes, marketing digital pme sp" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="author" content="Zaurak Web" />
-    <meta name="geo.region" content="BR-SP" />
-    <meta name="geo.placename" content="Embu das Artes, São Paulo" />
-    <meta name="geo.position" content="-23.6506;-46.8511" />
-    <meta name="ICBM" content="-23.6506, -46.8511" />
     <link rel="canonical" href="https://www.zaurakweb.com.br/" />
 
-    <!-- Performance: preconnect para Google Fonts -->
+    <!-- Geo / GMB signals -->
+    <meta name="geo.region" content="BR-SP" />
+    <meta name="geo.placename" content="Embu das Artes, São Paulo, Brasil" />
+    <meta name="geo.position" content="-23.6506;-46.8511" />
+    <meta name="ICBM" content="-23.6506, -46.8511" />
+
+    <!-- Mobile / PWA -->
+    <meta name="theme-color" content="#00F2FF" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Zaurak Web" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Performance: preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://wa.me" />
 
-    <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="Zaurak Web | Agência Digital SP — Sites, Tráfego Pago e Redes Sociais" />
-    <meta property="og:description" content="Agência completa em SP: site profissional, tráfego pago (Meta + Google), redes sociais e identidade visual para PMEs. Orçamento grátis no WhatsApp." />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Zaurak Web | Agência Digital SP — Sites, Tráfego Pago e Redes Sociais para PMEs" />
+    <meta property="og:description" content="Agência completa em SP: site profissional, tráfego pago (Meta + Google), redes sociais e identidade visual para PMEs. Apareça no Google e venda mais. Orçamento grátis." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.zaurakweb.com.br/" />
     <meta property="og:image" content="https://www.zaurakweb.com.br/zaurakweb-preview.jpg" />
@@ -28,30 +42,52 @@
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Zaurak Web — Agência Digital em São Paulo" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Zaurak Web" />
+    <meta property="og:updated_time" content="2026-04-08T00:00:00-03:00" />
 
-    <!-- Twitter / X Card -->
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Zaurak Web | Sites que Geram Clientes" />
-    <meta name="twitter:description" content="Criamos sites e landing pages de alta conversão. Apareça no Google e transforme visitas em clientes no WhatsApp." />
+    <meta name="twitter:site" content="@zaurakweb" />
+    <meta name="twitter:title" content="Zaurak Web | Agência Digital SP — Sites, Tráfego Pago e Redes Sociais" />
+    <meta name="twitter:description" content="Agência completa em SP: site, tráfego pago, redes sociais e identidade visual para PMEs. Orçamento grátis no WhatsApp." />
     <meta name="twitter:image" content="https://www.zaurakweb.com.br/zaurakweb-preview.jpg" />
+    <meta name="twitter:image:alt" content="Zaurak Web — Agência Digital em São Paulo" />
 
-    <!-- Structured Data: LocalBusiness (Google My Business) -->
+    <!-- Schema 1: ProfessionalService / Google My Business -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@id": "https://www.zaurakweb.com.br/#business",
       "name": "Zaurak Web",
       "alternateName": "Zaurak Web Agência Digital",
-      "description": "Agência digital completa em Embu das Artes e Grande SP. Criamos sites profissionais, gerenciamos tráfego pago (Meta Ads + Google Ads), redes sociais e identidade visual para pequenas e médias empresas.",
+      "slogan": "Sites que geram clientes todos os dias",
+      "description": "Agência digital completa em Embu das Artes e Grande São Paulo. Criamos sites profissionais, gerenciamos tráfego pago (Meta Ads + Google Ads), redes sociais e identidade visual para pequenas e médias empresas.",
       "url": "https://www.zaurakweb.com.br",
-      "logo": "https://www.zaurakweb.com.br/favicon.svg",
-      "image": "https://www.zaurakweb.com.br/zaurakweb-preview.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.zaurakweb.com.br/favicon.svg",
+        "width": 512,
+        "height": 512
+      },
+      "image": [
+        "https://www.zaurakweb.com.br/zaurakweb-preview.jpg"
+      ],
       "email": "zaurakdesign@gmail.com",
       "telephone": "+55-11-93231-3943",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-11-93231-3943",
+        "contactType": "customer service",
+        "availableLanguage": "Portuguese",
+        "contactOption": "TollFree",
+        "areaServed": "BR"
+      },
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Embu das Artes",
         "addressLocality": "Embu das Artes",
         "addressRegion": "SP",
         "postalCode": "06800-000",
@@ -62,12 +98,26 @@
         "latitude": -23.6506,
         "longitude": -46.8511
       },
+      "hasMap": "https://maps.google.com/?q=Embu+das+Artes,SP,Brasil",
       "areaServed": [
         { "@type": "City", "name": "Embu das Artes" },
         { "@type": "City", "name": "São Paulo" },
         { "@type": "City", "name": "Cotia" },
         { "@type": "City", "name": "Itapecerica da Serra" },
-        { "@type": "State", "name": "São Paulo" }
+        { "@type": "City", "name": "Taboão da Serra" },
+        { "@type": "City", "name": "Osasco" },
+        { "@type": "AdministrativeArea", "name": "Grande São Paulo" }
+      ],
+      "knowsAbout": [
+        "Criação de Sites",
+        "SEO",
+        "Tráfego Pago",
+        "Meta Ads",
+        "Google Ads",
+        "Gestão de Redes Sociais",
+        "Identidade Visual",
+        "Marketing Digital para PMEs",
+        "Landing Pages de Alta Conversão"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -78,12 +128,13 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Criação de Site Profissional",
-              "description": "Site responsivo no ar em até 15 dias com SEO básico configurado"
+              "description": "Site responsivo no ar em até 15 dias com SEO básico configurado. Layout moderno e focado em conversão."
             },
             "priceSpecification": {
               "@type": "PriceSpecification",
               "priceCurrency": "BRL",
-              "minPrice": "2000"
+              "minPrice": "2000",
+              "maxPrice": "6000"
             }
           },
           {
@@ -91,12 +142,13 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Gestão de Tráfego Pago",
-              "description": "Gestão de campanhas Meta Ads e Google Ads para PMEs"
+              "description": "Gestão completa de campanhas Meta Ads (Facebook e Instagram) e Google Ads para PMEs. ROAS mínimo de 3x."
             },
             "priceSpecification": {
               "@type": "PriceSpecification",
               "priceCurrency": "BRL",
               "minPrice": "800",
+              "maxPrice": "2000",
               "unitText": "mês"
             }
           },
@@ -105,12 +157,13 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Gestão de Redes Sociais",
-              "description": "Criação de posts, stories e Reels para Instagram e Facebook"
+              "description": "Criação de posts, stories e Reels para Instagram e Facebook com foco em geração de leads."
             },
             "priceSpecification": {
               "@type": "PriceSpecification",
               "priceCurrency": "BRL",
               "minPrice": "800",
+              "maxPrice": "2000",
               "unitText": "mês"
             }
           },
@@ -119,19 +172,20 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Identidade Visual",
-              "description": "Logotipo, paleta de cores e manual de marca"
+              "description": "Logotipo profissional, paleta de cores e manual de marca para transmitir autoridade."
             },
             "priceSpecification": {
               "@type": "PriceSpecification",
               "priceCurrency": "BRL",
-              "minPrice": "2000"
+              "minPrice": "2000",
+              "maxPrice": "6000"
             }
           }
         ]
       },
       "priceRange": "R$800 – R$6.000",
       "currenciesAccepted": "BRL",
-      "paymentAccepted": "PIX, Transferência, Cartão de Crédito",
+      "paymentAccepted": "PIX, Transferência Bancária, Cartão de Crédito",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -141,14 +195,129 @@
         }
       ],
       "sameAs": [
-        "https://www.instagram.com/zaurakweb.sp/"
+        "https://www.instagram.com/zaurakweb.sp/",
+        "https://wa.me/5511932313943"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5",
+        "ratingValue": "5.0",
         "reviewCount": "50",
-        "bestRating": "5"
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "foundingDate": "2024",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 1,
+        "maxValue": 10
       }
+    }
+    </script>
+
+    <!-- Schema 2: WebSite com SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.zaurakweb.com.br/#website",
+      "url": "https://www.zaurakweb.com.br",
+      "name": "Zaurak Web",
+      "description": "Agência digital completa para PMEs em São Paulo",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://www.zaurakweb.com.br/#business"
+      },
+      "dateModified": "2026-04-08"
+    }
+    </script>
+
+    <!-- Schema 3: FAQPage (rich snippet nos resultados do Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso já ter um site ou redes sociais para contratar a Zaurak Web?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Podemos começar do zero e estruturar tudo para você, desde a compra do domínio até a estratégia de captação de clientes. Atendemos empresas em qualquer estágio digital."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Em quanto tempo o site fica pronto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Projetos padrão são entregues em até 15 dias úteis sem perder qualidade. Dependendo da complexidade, pode ser mais rápido. Trabalhamos com prazos definidos e comunicação transparente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Zaurak Web dá suporte após a entrega?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Você terá suporte técnico e ajustes garantidos para assegurar que sua solução de vendas continue operando em alta performance após a entrega."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o valor dos serviços da Zaurak Web?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sites e identidade visual partem de R$ 2.000 (projeto único). Gestão recorrente de tráfego pago ou redes sociais começa em R$ 800/mês. O pacote mais popular combina site + gestão de Instagram a partir de R$ 2.490, com 1 mês grátis para os primeiros clientes do mês."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso pagar parcelado ou mensalmente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Projetos pontuais como criação de site e identidade visual podem ser parcelados. Serviços recorrentes como tráfego pago e redes sociais têm cobrança mensal, sem fidelidade mínima nos primeiros meses. Entre em contato para montar o melhor plano para o seu orçamento."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema 4: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://www.zaurakweb.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Serviços",
+          "item": "https://www.zaurakweb.com.br/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Portfólio",
+          "item": "https://www.zaurakweb.com.br/#portfolio"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "FAQ",
+          "item": "https://www.zaurakweb.com.br/#faq"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Contato",
+          "item": "https://www.zaurakweb.com.br/#contact"
+        }
+      ]
     }
     </script>
 

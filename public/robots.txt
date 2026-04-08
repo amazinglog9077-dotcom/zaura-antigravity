@@ -1,3 +1,26 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
-Sitemap: https://zaurakweb.com.br/sitemap.xml
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemaps
+Sitemap: https://www.zaurakweb.com.br/sitemap.xml
+
+# Crawl rate hint
+Crawl-delay: 1
+
+# Google-specific bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
