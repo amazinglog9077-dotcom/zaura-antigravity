@@ -12,7 +12,10 @@ import {
   Plus,
   Minus,
   CheckCircle2,
-  Send
+  Send,
+  Monitor,
+  Users,
+  Palette
 } from 'lucide-react';
 
 const InstagramIcon = ({ size = 16 }: { size?: number }) => (
@@ -298,7 +301,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const whatsappLink = "https://wa.me/5511932313943";
+  const whatsappLink = "https://wa.me/5511932313943?text=Ol%C3%A1%2C+vim+pelo+site+da+Zaurak+Web+e+quero+saber+mais+sobre+os+servi%C3%A7os!";
   const email = "zaurakdesign@gmail.com";
   const address = "Embu das Artes";
 
@@ -349,6 +352,7 @@ export default function App() {
           <nav className="hidden md:flex items-center gap-8 text-[13px] font-sans font-light uppercase tracking-[0.15em] text-[#888888]">
             <a href="#problem" className="hover:text-white transition-colors">Diagnóstico</a>
             <a href="#solution" className="hover:text-white transition-colors">Solução</a>
+            <a href="#services" className="hover:text-white transition-colors">Serviços</a>
             <a href="#benefits" className="hover:text-white transition-colors">Métricas</a>
             <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
           </nav>
@@ -428,6 +432,45 @@ export default function App() {
                   </TechButton>
                   <div className="flex items-center px-6 py-4 border border-white/10 font-mono text-sm text-white/60 uppercase tracking-widest whitespace-nowrap">
                     Foco 100% em Resultado
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Tech Ticker Strip */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                className="ticker-wrapper w-full my-10 overflow-hidden border border-cyan-tech/25 bg-black/70 backdrop-blur-sm relative"
+              >
+                <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
+                <div className="py-3 flex overflow-hidden">
+                  <div className="ticker-track flex shrink-0">
+                    {[
+                      { label: 'OFERTA_ABRIL', text: 'Site + 1 mês Instagram GRÁTIS · a partir de R$ 2.490', hot: true },
+                      { label: 'VAGAS_LIMITADAS', text: 'Apenas 5 clientes este mês', hot: true },
+                      { label: 'FULL_SERVICE', text: 'Sites · Tráfego Pago · Redes Sociais · Identidade Visual', hot: false },
+                      { label: 'ENTREGA_RÁPIDA', text: 'Site no ar em até 15 dias úteis', hot: false },
+                      { label: '50+_PROJETOS', text: 'Entregues · 99.8% satisfação garantida', hot: false },
+                      { label: 'META_ROAS', text: '3x retorno mínimo sobre investimento', hot: false },
+                      { label: 'ATENDIMENTO_PME', text: 'Embu das Artes · Grande SP · Foco 100% resultado', hot: false },
+                      { label: 'OFERTA_ABRIL', text: 'Site + 1 mês Instagram GRÁTIS · a partir de R$ 2.490', hot: true },
+                      { label: 'VAGAS_LIMITADAS', text: 'Apenas 5 clientes este mês', hot: true },
+                      { label: 'FULL_SERVICE', text: 'Sites · Tráfego Pago · Redes Sociais · Identidade Visual', hot: false },
+                      { label: 'ENTREGA_RÁPIDA', text: 'Site no ar em até 15 dias úteis', hot: false },
+                      { label: '50+_PROJETOS', text: 'Entregues · 99.8% satisfação garantida', hot: false },
+                      { label: 'META_ROAS', text: '3x retorno mínimo sobre investimento', hot: false },
+                      { label: 'ATENDIMENTO_PME', text: 'Embu das Artes · Grande SP · Foco 100% resultado', hot: false },
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3 px-6 shrink-0">
+                        <span className={`text-[9px] font-mono px-2 py-0.5 uppercase tracking-widest shrink-0 ${item.hot ? 'bg-cyan-tech text-black font-bold' : 'bg-white/5 text-cyan-tech border border-cyan-tech/20'}`}>
+                          {item.label}
+                        </span>
+                        <span className="text-[11px] font-mono text-white/60 whitespace-nowrap">{item.text}</span>
+                        <span className="text-cyan-tech/25 text-base px-2">◆</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </motion.div>
@@ -533,7 +576,8 @@ export default function App() {
                   {[
                     { title: "Um site rápido e profissional", icon: <Zap className="text-cyan-tech" /> },
                     { title: "Estratégias para aparecer no Google", icon: <Search className="text-cyan-tech" /> },
-                    { title: "Estrutura pensada para gerar contatos", icon: <Target className="text-cyan-tech" /> }
+                    { title: "Estrutura pensada para gerar contatos", icon: <Target className="text-cyan-tech" /> },
+                    { title: "Tráfego pago e redes sociais gerenciados", icon: <TrendingUp className="text-cyan-tech" /> }
                   ].map((item, i) => (
                     <motion.div
                       key={i}
@@ -586,6 +630,101 @@ export default function App() {
                 </TechCard>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Services & Pricing Section */}
+        <section id="services" className="py-24 bg-black/70 section-grid">
+          <div className="container mx-auto px-6">
+            <SectionTitle subtitle="O que oferecemos" align="center">
+              Serviços completos para PMEs<br />num único lugar
+            </SectionTitle>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {[
+                {
+                  icon: <Monitor className="text-cyan-tech" size={28} />,
+                  label: "SITE",
+                  title: "Site Profissional",
+                  desc: "Landing page ou site institucional responsivo, no ar em até 15 dias com SEO básico incluído.",
+                  price: "A partir de R$ 2.000",
+                  tag: "Projeto único"
+                },
+                {
+                  icon: <TrendingUp className="text-cyan-tech" size={28} />,
+                  label: "TRÁFEGO",
+                  title: "Tráfego Pago",
+                  desc: "Gestão de campanhas no Meta Ads e Google Ads para trazer clientes todos os dias.",
+                  price: "A partir de R$ 800/mês",
+                  tag: "Recorrente"
+                },
+                {
+                  icon: <Users className="text-cyan-tech" size={28} />,
+                  label: "SOCIAL",
+                  title: "Redes Sociais",
+                  desc: "Criação de posts, stories e Reels com foco em geração de leads e engajamento real.",
+                  price: "A partir de R$ 800/mês",
+                  tag: "Recorrente"
+                },
+                {
+                  icon: <Palette className="text-cyan-tech" size={28} />,
+                  label: "DESIGN",
+                  title: "Identidade Visual",
+                  desc: "Logotipo, paleta de cores e manual de marca para sua empresa passar profissionalismo.",
+                  price: "A partir de R$ 2.000",
+                  tag: "Projeto único"
+                }
+              ].map((service, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <TechCard label={service.label} className="flex flex-col h-full">
+                    <div className="w-12 h-12 flex items-center justify-center bg-cyan-tech/10 border border-cyan-tech/20 mb-4">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-lg font-display font-bold mb-2">{service.title}</h3>
+                    <p className="text-white/50 text-sm leading-relaxed flex-grow mb-6">{service.desc}</p>
+                    <div className="mt-auto">
+                      <div className="text-cyan-tech font-mono font-bold text-sm">{service.price}</div>
+                      <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest mt-1">{service.tag}</div>
+                    </div>
+                  </TechCard>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Pacote Destaque */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="border border-cyan-tech/40 bg-cyan-tech/5 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8"
+            >
+              <div>
+                <div className="text-[10px] font-mono text-cyan-tech uppercase tracking-widest mb-2">OFERTA ESPECIAL · VAGAS LIMITADAS</div>
+                <h3 className="text-2xl md:text-3xl font-display font-black uppercase italic mb-3">
+                  Site completo <span className="text-cyan-tech">+</span> 1 mês de Instagram <span className="text-cyan-tech">GRÁTIS</span>
+                </h3>
+                <ul className="space-y-1 text-sm text-white/70">
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-cyan-tech shrink-0" /> Site responsivo no ar em até 15 dias</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-cyan-tech shrink-0" /> SEO básico configurado</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-cyan-tech shrink-0" /> 1 mês de posts + stories incluídos</li>
+                </ul>
+              </div>
+              <div className="text-center shrink-0">
+                <div className="text-[10px] font-mono text-white/40 uppercase mb-1">a partir de</div>
+                <div className="text-4xl font-display font-black text-white mb-1">R$ 2.490</div>
+                <div className="text-[10px] font-mono text-cyan-tech uppercase tracking-widest mb-6">Para os primeiros 5 clientes</div>
+                <TechButton href={whatsappLink}>
+                  <MessageCircle size={16} />
+                  Quero essa oferta
+                </TechButton>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -647,7 +786,7 @@ export default function App() {
                 Quem já confiou
               </SectionTitle>
               <div className="text-center md:text-right font-mono text-[10px] text-white/30 uppercase tracking-widest leading-relaxed">
-                <span className="text-cyan-tech">TOTAL_PROJETOS_ENTREGUES:</span> 42<br />
+                <span className="text-cyan-tech">TOTAL_PROJETOS_ENTREGUES:</span> 50+<br />
                 <span className="text-cyan-tech">SATISFAÇÃO_CLIENTE:</span> 99.8%
               </div>
             </div>
@@ -756,6 +895,14 @@ export default function App() {
                 <FAQItem
                   question="Vocês dão suporte depois?"
                   answer="Sim. Você terá suporte técnico e ajustes garantidos para assegurar que sua solução de vendas continue operando em alta performance."
+                />
+                <FAQItem
+                  question="Qual o valor dos serviços?"
+                  answer="Sites e identidade visual partem de R$ 2.000 (projeto único). Gestão recorrente de tráfego pago ou redes sociais começa em R$ 800/mês. Nosso pacote mais popular combina site + gestão de Instagram a partir de R$ 2.490 com 1 mês grátis para os primeiros clientes do mês."
+                />
+                <FAQItem
+                  question="Posso pagar parcelado ou mensalmente?"
+                  answer="Sim. Projetos pontuais (site, identidade visual) podem ser parcelados. Serviços recorrentes (tráfego pago, redes sociais) têm cobrança mensal, sem fidelidade mínima nos primeiros meses. Entre em contato para montar o melhor plano para o seu orçamento."
                 />
               </div>
             </div>
