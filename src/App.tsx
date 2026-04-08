@@ -302,7 +302,7 @@ export default function App() {
   }, []);
 
   const whatsappLink = "https://wa.me/5511932313943?text=Ol%C3%A1%2C+vim+pelo+site+da+Zaurak+Web+e+quero+saber+mais+sobre+os+servi%C3%A7os!";
-  const email = "zaurakdesign@gmail.com";
+  const email = "contato@zaurakweb.com.br";
   const address = "Embu das Artes";
 
   return (
